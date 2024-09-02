@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
 import plotly.express as px
 import calendar
 from datetime import datetime
@@ -78,7 +77,6 @@ if uploaded_file is not None:
 
     # Plot data using Matplotlib
     st.subheader("Matplotlib Plot")
-    fig, ax = plt.subplots()
     ax.plot(df_uploaded.index, df_uploaded.iloc[:, 0], 'o-')
     ax.set_xlabel("Index")
     ax.set_ylabel(df_uploaded.columns[0])
